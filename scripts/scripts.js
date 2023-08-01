@@ -1,4 +1,4 @@
-/****************** YOUR NAME: 
+/****************** YOUR NAME: Sanketh Mekala
 
 The instructions describe the missing logic that is needed; you will translate these into JavaScript in the places indicated.
 
@@ -31,13 +31,13 @@ var duration= 0;
 
 function recalculate(){
     let costLabel = document.getElementById("calculated-cost");
+    let newTotalCost = 0;
     if(modelName=='XYZ'){
         newTotalCost = duration * 100;
-    }
-    else if(modelName = 'CPRG'){
+    } else if(modelName == 'CPRG'){
         newTotalCost = duration * 213;
     }
-    costLabel.innerHTML = newTotalCost
+    costLabel.innerHTML = newTotalCost;
 }
 
 /****************** model button logic ******************/
@@ -84,11 +84,10 @@ modelButton.addEventListener("click", changeModel);
 let durationButton = document.getElementById('duration-button');
 
 function changeDuration(){
-let durationChange = window.prompt("Enter your new duration (in days):")
+let durationChange = window.prompt("Enter your new duration (in days):");
 duration = durationChange;
 let durationText = document.getElementById('duration-text');
-
-durationText.innerHTML = duration
+durationText.innerHTML = duration;
 recalculate();
 }
 durationButton.addEventListener("click", changeDuration);
